@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Press+Start+2P&family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigate {
+  background-color: #e6e6cc;
+  font-size: 25px;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+}
+
+.nav-link, .navbar-brand {
+  color: teal;
+}
+
+.navbar-brand {
+  font-size: 35px !important;
+  font-family: "VT323", monospace;
+  font-weight: 700;
+}
+
+.product-page{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.side-nav {
+  border-radius: 43px;
+  background: #e0e0e0;
+  box-shadow:  35px 35px 57px #9b9b9b,
+             -35px -35px 57px #ffffff;
+  height: auto;
+  width: 400px !important;
+  display: inline-block;
+  padding: 20px;
+  margin-right: 60px;
+}
+
+.prod-search h2{
+  font-size: 20px;
+}
+
+.prod-cards{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  min-height: 100%;
+  /* height: 150px !important; */
+}
+
+.cards {
+  background: transparent;
+}
+
+.garbage-can-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #6f3534; /* Bootstrap danger color */
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.garbage-can-icon:hover {
+  background-color: teal; /* Darken the color on hover */
+}
+
+.banner1 {
+  position: relative;
+  width: 100%;
+  min-height: 610px; /* Set minimum height to 800 pixels */
+  max-height: 500px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.banner1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/crop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* filter: blur(1.5px); */
+  opacity: 25%;
+  z-index: -1;
+}
+
+.banner2 {
+  position: relative;
+  z-index: 1; /* Ensure content appears above blurred background */
+}
+
+.banner2 p {
+  color: #6f3534;
+  text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+  font-weight: 700;
+  z-index: 1;
+  position: relative;
+  opacity: 1;
+}
+
+.banner2 p {
+  font-size: 3rem;
+  font-family: "Fjalla One", sans-serif;
+}
+
+
+.glitch-wrapper {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.glitch {
+  position: relative;
+  font-size: 150px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #6f3534;
+  letter-spacing: 5px;
+  z-index: 1;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.glitch:before {
+  animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #00ffff;
+  z-index: -1;
+}
+
+.glitch:after {
+  animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  color: #ff00ff;
+  z-index: -2;
+}
+
+@keyframes glitch-color {
+  0% {
+     transform: translate(0);
+  }
+
+  20% {
+     transform: translate(-3px, 3px);
+  }
+
+  40% {
+     transform: translate(-3px, -3px);
+  }
+
+  60% {
+     transform: translate(3px, 3px);
+  }
+
+  80% {
+     transform: translate(3px, -3px);
+  }
+
+  to {
+     transform: translate(0);
+  }
+}
+
+
+.cardHighlight {
+  min-height: 100%;
+}
+
+
+.btn {
+  color: #fff !important;
+  background-color: #6f3534 !important;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.carousel-caption > .hlights {
+  color: rgb(251, 251, 17);
+  font-size: 30px !important;
+  font-weight: 500 !important;
+  text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+
+.card {
+  min-height: 100%;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400 !important;
+}
+
+.card-body {
+  background-color: #e6e6cc;
+  color: #6f3534;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 992px) {
+  .banner2 p {
+    font-size: 2rem;
+  }
+  .glitch {
+    font-size: 100px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .banner2 p {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+  .glitch {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner2 p {
+    font-size: .9rem; /* Adjust font size for even smaller screens */
+  }
+  .glitch {
+    font-size: 50px;
+  }
+}
